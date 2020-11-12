@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XampleController.Page1"
+             xmlns:local="clr-namespace:XampleController"
+             xmlns:ia="clr-namespace:IntelliAbb.Xamarin.Controls;assembly=IntelliAbb.Xamarin.Controls">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding PipeList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal" Spacing="20">
+                                    <ia:Checkbox Shape="Circle"/>
+                                    <Label Text="#1"/>
+                                    <Label Text="1325468"/>
+                                    <Label Text="12.500"/>
+                                    <BoxView CornerRadius="40" WidthRequest="1"/>
+                                    <Button BackgroundColor="White" Text="^" Clicked="Button_Clicked"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" x:Name="DetailCard" IsVisible="false">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="material:"/>
+                                        <Label Text="{Binding Material}"/>
+                                        <Label Text="{Binding PipeType}"/>
+                                        <Button Text="ver detalle"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Former code:"/>
+                                        <Label Text="{Binding FormerCode}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Heat:" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding Heat}" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="Running Length:" HorizontalOptions="EndAndExpand"/>
+                                        <Label Text="{Binding RunningLength}" HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XampleController.ImageButton">
+
+    <StackLayout Orientation="Vertical">
+
+        <StackLayout Orientation="Vertical" WidthRequest="300">
+            <Image x:Name="innerImage" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Label x:Name="innerLabel" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <Button BackgroundColor="Blue" Text="show" Clicked="Button_Clicked"/>
+        </StackLayout>
+        <BoxView BackgroundColor="Red" IsVisible="false" x:Name="Box"/>
+    </StackLayout>
+
+</ContentView>

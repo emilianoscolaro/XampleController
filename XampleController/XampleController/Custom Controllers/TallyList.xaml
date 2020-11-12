@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XampleController.Custom_Controllers.TallyList"
+             xmlns:ia="clr-namespace:IntelliAbb.Xamarin.Controls;assembly=IntelliAbb.Xamarin.Controls">
+
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+            <ia:Checkbox Shape="Circle"/>
+            <Label x:Name="pipeNumberTitle"/>
+            <Label x:Name="URCTitle"/>
+            <Label x:Name="OvLengthTitle"/>
+        </StackLayout>
+        <StackLayout Orientation="Vertical">
+            
+        </StackLayout>
+    </StackLayout>
+</ContentView>
